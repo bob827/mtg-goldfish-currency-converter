@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MTG Goldfish - USD to CAD converter
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      1.0.0
 // @description  Tampermonkey script to convert USD prices to CAD prices on mtggoldfish.com
 // @author       thewhite147
 // @match        https://www.mtggoldfish.com/*
@@ -21,6 +21,7 @@
 					+ ".col-price," 
 					+ ".increase,"
 					+ ".decrease,"
+					+ ".neutral,"
 					+ ".deck-price-paper,"
 					+ ".deck-col-price,"
 					+ ".price-box-price,"
