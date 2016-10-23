@@ -22,7 +22,7 @@
 		".increase,"+
 		".decrease,"+
 		".neutral,"+
-		//".deck-price-paper,"+
+		".deck-price-paper,"+
 		"#tab-paper .deck-col-price,"+
 		".paper .price-box-price,"+
 		".btn-shop-price";
