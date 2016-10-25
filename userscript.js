@@ -12,7 +12,7 @@
     'use strict';
 	
 	// Hardcoded Canadian dollar value
-	var CAD_VALUE = "1,3386";
+	var CAD_VALUE = "1.3386";
 	
 	// List of price selectors (don't forget the comma at the end)
 	var _selectors = 
@@ -49,7 +49,7 @@
 	
 	function doReplaces(value) {
         if(!value) return value;
-		var replaceChars = "$+ ";
+		var replaceChars = "$";
 		
 		for (var i = 0; i < replaceChars.length; i++) {
 			value = value.replace(replaceChars[i], "");
