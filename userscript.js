@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MTG Goldfish - USD to CAD converter
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.2
 // @description  Tampermonkey script to convert USD prices to CAD prices on mtggoldfish.com
 // @author       thewhite147
 // @match        https://www.mtggoldfish.com/*
@@ -12,7 +12,7 @@
     'use strict';
 	
 	// Hardcoded Canadian dollar value
-	var CAD_VALUE = "1.33315";
+	var CAD_VALUE = "1,3386";
 	
 	// List of price selectors (don't forget the comma at the end)
 	var _selectors = 
@@ -25,7 +25,8 @@
 		".deck-price-paper,"+
 		"#tab-paper .deck-col-price,"+
 		".paper .price-box-price,"+
-		".btn-shop-price";
+		".btn-shop-price,"+
+		".widgetPriceCompact-prices-paper .widgetPriceCompact-prices-link";
 					
 	// Let's do it!			
 	doConvert();
@@ -54,6 +55,7 @@
 			value = value.replace(replaceChars[i], "");
 		}
 		
+		value = value.replace(/&nbsp;/g, "");
 		return value;
 	}
 	
